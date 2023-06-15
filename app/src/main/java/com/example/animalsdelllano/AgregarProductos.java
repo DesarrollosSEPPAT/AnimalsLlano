@@ -22,7 +22,7 @@ import java.util.Locale;
 
 public class AgregarProductos extends AnularBotonRetroceso {
 
-    // Codigo del pedido
+    // Codigo del pedidos
     String CodigoPedido;
     private ImageButton retroceso;
 
