@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResumenPedido">
+
+    <RelativeLayout
+        android:id="@+id/seccionAV1"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:background="@drawable/backgroundverdeclaro"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/logoredondo" />
+
+        <!-- Texto del Nombre de Usuario -->
+        <TextView
+            android:id="@+id/nombreUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80sp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titulodatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/gris"
+        android:layout_below="@+id/seccionAV1"
+        android:text="Resumen del pedido"
+        android:layout_marginTop="10sp"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="300sp"
+        android:layout_height="430sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/IngresoDatos"
+        android:layout_below="@id/titulodatos">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <!-- Texto de nombre de usuario -->
+
+            <!-- Capturar el tipo de producto -->
+            <TextView
+                android:id="@+id/lbcodpedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="CÓDIGO DEL PEDIDO"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/codigopedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:layout_below="@id/lbcodpedido"
+                android:padding="13sp"
+                android:layout_marginTop="5sp"
+                android:textColor="#0C7238"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Texto de la marca del producto -->
+            <TextView
+                android:id="@+id/lbCliente"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/codigopedido"
+                android:layout_marginTop="10sp"
+                android:text="CLIENTE"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- Capturar la marca del producto -->
+            <TextView
+                android:id="@+id/cliente"
+                android:layout_width="145sp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:layout_below="@+id/lbCliente"
+                android:padding="13sp"
+                android:layout_marginTop="5sp"
+                android:textColorHint="#FF0000"
+                android:hint="*"
+                android:textColor="#0C7238"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Texto del nombre del producto -->
+            <TextView
+                android:id="@+id/lbsucursal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/codigopedido"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="155sp"
+                android:text="NOMBRE"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- Capturar el nombre del producto -->
+            <AutoCompleteTextView
+                android:id="@+id/sucursal"
+                android:layout_width="145sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/background"
+                android:layout_below="@id/lbsucursal"
+                android:padding="13sp"
+                android:layout_marginTop="5sp"
+                android:textColorHint="#FF0000"
+                android:hint="*"
+                android:textColor="#0C7238"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Texto de la presentación del producto -->
+            <TextView
+                android:id="@+id/lbPresentacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sucursal"
+                android:layout_marginTop="10sp"
+                android:text="PRESENTACIÓN"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- Capturar la presentación del producto -->
+            <AutoCompleteTextView
+                android:id="@+id/Presentacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:layout_below="@id/lbPresentacion"
+                android:padding="13sp"
+                android:layout_marginTop="5sp"
+                android:textColorHint="#FF0000"
+                android:hint="*"
+                android:textColor="#0C7238"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Texto de la referencia del producto -->
+            <TextView
+                android:id="@+id/lbreferencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Presentacion"
+                android:layout_marginTop="10sp"
+                android:text="REFERENCIA"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- Capturar la referencia del producto -->
+            <TextView
+                android:id="@+id/Referencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbreferencia"
+                android:layout_marginTop="10sp"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:background="@drawable/background"
+                android:textSize="16sp" />
+
+            <!-- Texto de la descripcion del producto -->
+            <TextView
+                android:id="@+id/lbDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Referencia"
+                android:layout_marginTop="10sp"
+                android:text="DESCRIPCIÓN"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- Capturar la descripcion del producto -->
+            <TextView
+                android:id="@+id/Descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbDescripcion"
+                android:layout_marginTop="10sp"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:background="@drawable/background"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:id="@+id/ValorCantidad"
+                android:layout_below="@id/Descripcion"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/lbValorUnitario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="VALOR UNITARIO"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/valorUnitario"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:padding="13sp"
+                    android:textColor="#0C7238"
+                    android:background="@drawable/background"
+                    android:layout_below="@id/lbValorUnitario"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lbCantidades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_alignParentRight="true"
+                    android:text="CANTIDAD"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/Cantidades"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_alignParentRight="true"
+                    android:padding="13sp"
+                    android:textColor="#0C7238"
+                    android:background="@drawable/background"
+                    android:textColorHint="#FF0000"
+                    android:hint="*"
+                    android:layout_below="@id/lbCantidades"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:id="@+id/Descuentos"
+                android:layout_below="@id/ValorCantidad">
+
+                <TextView
+                    android:id="@+id/lbDescuento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="DESCUENTO"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/descuento"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:padding="13sp"
+                    android:textColor="#0C7238"
+                    android:inputType="number"
+                    android:background="@drawable/background"
+                    android:layout_below="@id/lbDescuento"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lbCantidadesDescuento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_alignParentRight="true"
+                    android:text="CANTIDAD AD."
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/CantidadesDescuento"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_alignParentRight="true"
+                    android:padding="13sp"
+                    android:textColor="#0C7238"
+                    android:background="@drawable/background"
+                    android:layout_below="@id/lbCantidadesDescuento"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!-- Texto de los comentarios del producto -->
+            <TextView
+                android:id="@+id/lbComentarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Descuentos"
+                android:layout_marginTop="10sp"
+                android:text="COMENTARIOS"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!-- Capturar los comentarios del producto -->
+            <EditText
+                android:id="@+id/Comentarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbComentarios"
+                android:layout_marginTop="10sp"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:background="@drawable/background"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/IngresoDatos"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/circuloverde">
+
+        <ImageButton
+            android:id="@+id/retroceder"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:contentDescription="Retroceder"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/retroceder"
+            android:background="@drawable/background2"
+            >
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/seppat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FROM SEPPAT SAS"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15sp"
+        />
+
+</RelativeLayout>

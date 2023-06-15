@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelacionarCliente">
+
+    <RelativeLayout
+        android:id="@+id/seccionAV1"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:background="@drawable/backgroundverdeclaro"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/logoredondo" />
+
+        <!-- Texto del Nombre de Usuario -->
+        <TextView
+            android:id="@+id/nombreUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80sp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- Texto de Sugerencia -->
+    <TextView
+        android:id="@+id/titulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gris"
+        android:text="Ingresa los datos del cliente"
+        android:layout_below="@+id/seccionAV1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="280sp"
+        android:layout_height="490sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titulo1"
+        android:id="@+id/datoscliente">
+
+        <RelativeLayout
+            android:id="@+id/scrolleable"
+            android:layout_width="280sp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/seccionAV1" >
+
+            <!-- Texto de nombre de usuario -->
+            <TextView
+                android:id="@+id/lbcliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="CLIENTE"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <!-- Capturar usuario -->
+            <AutoCompleteTextView
+                android:id="@+id/cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:layout_below="@id/lbcliente"
+                android:padding="13sp"
+                android:layout_marginTop="5sp"
+                android:textColorHint="#FF0000"
+                android:hint="*"
+                android:textColor="#0C7238"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Texto de sucursal -->
+            <TextView
+                android:id="@+id/lbsucursal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cliente"
+                android:layout_marginTop="10sp"
+                android:text="SUCURSAL"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <!-- Capturar sucursal -->
+            <AutoCompleteTextView
+                android:id="@+id/sucursal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:layout_below="@id/lbsucursal"
+                android:padding="13sp"
+                android:layout_marginTop="5sp"
+                android:textColorHint="#FF0000"
+                android:hint="*"
+                android:textColor="#0C7238"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Texto de NIT/CC/ID -->
+            <TextView
+                android:id="@+id/lbidentificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sucursal"
+                android:layout_marginTop="10sp"
+                android:text="NIT/C.C./IDENTIFICACIÓN"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <!-- Capturar direccion -->
+            <TextView
+                android:id="@+id/identificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbidentificacion"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background"
+                android:inputType="text"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:textSize="16sp" />
+
+            <!-- Texto de direccion -->
+            <TextView
+                android:id="@+id/lbdireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/identificacion"
+                android:layout_marginTop="10sp"
+                android:text="DIRECCIÓN"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <!-- Capturar direccion -->
+            <TextView
+                android:id="@+id/direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbdireccion"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background"
+                android:inputType="text"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:textSize="16sp" />
+
+            <!-- Texto de telefono -->
+            <TextView
+                android:id="@+id/lbciudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/direccion"
+                android:layout_marginTop="10sp"
+                android:text="CIUDAD"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <!-- Capturar direccion -->
+            <TextView
+                android:id="@+id/ciudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbciudad"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background"
+                android:inputType="number"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:textSize="16sp" />
+
+            <!-- Texto de telefono -->
+            <TextView
+                android:id="@+id/lbtelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ciudad"
+                android:layout_marginTop="10sp"
+                android:text="TELÉFONO"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <!-- Capturar direccion -->
+            <TextView
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbtelefono"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background"
+                android:inputType="number"
+                android:padding="13sp"
+                android:textColor="#0C7238"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ConfirmarCliente"
+        android:layout_width="280sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        android:layout_below="@id/datoscliente"
+        android:layout_marginTop="5sp"
+        android:text="CONFIRMAR"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ConfirmarCliente"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/circuloverde">
+
+        <ImageButton
+            android:id="@+id/retroceder"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:contentDescription="Retroceder"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/retroceder"
+            android:background="@drawable/background2"
+            >
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+</RelativeLayout>

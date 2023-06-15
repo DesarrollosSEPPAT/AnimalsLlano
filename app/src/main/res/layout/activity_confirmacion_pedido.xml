@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ConfirmacionPedido">
+
+    <RelativeLayout
+        android:id="@+id/seccionAV1"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:background="@drawable/backgroundverdeclaro"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:src="@drawable/logoredondo" />
+
+        <!-- Texto de Login -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80sp"
+            android:id="@+id/nombreUser"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/logoconfirmacion"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/seccionAV1"
+        android:layout_marginTop="30sp"
+        android:background="#FFFFFF"
+        android:src="@drawable/confirmacion">
+
+    </pl.droidsonroids.gif.GifImageView>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoconfirmacion"
+        android:text="¡EL PEDIDO SE HA CREADO CON EXITO!"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginTop="10sp"
+        android:textColor="#0C7238" />
+
+    <TextView
+        android:id="@+id/codped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_marginTop="30sp"
+        android:textColor="@color/orange" />
+
+    <RelativeLayout
+        android:layout_width="75sp"
+        android:layout_height="75sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60sp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circuloverde">
+
+        <ImageButton
+            android:id="@+id/menuppalvendedor"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:contentDescription="Retroceder"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/retroceder"
+            android:background="@drawable/background2"
+            >
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/seppat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FROM SEPPAT SAS"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15sp"
+        />
+
+</RelativeLayout>
