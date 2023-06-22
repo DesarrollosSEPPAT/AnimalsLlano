@@ -38,7 +38,7 @@ public class BasesDeDatos extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE Productos (Id INTEGER PRIMARY KEY AUTOINCREMENT, CodigoPedido TEXT, Referencia TEXT, Tipo TEXT, Marca TEXT, Nombre TEXT, Presentacion TEXT, Descripcion TEXT, ValorUnitario NUMERIC, Cantidad INTEGER, ValorTotal NUMERIC, Obervaciones TEXT, Descuento INTEGER, Estatus NUMERIC)");
 
         // Base de datos de Clientes
-        db.execSQL("CREATE TABLE Clientes (Id INTEGER PRIMARY KEY AUTOINCREMENT, IDCliente TEXT, Cliente TEXT, Sucursal TEXT, Direccion TEXT, Ciudad TEXT, Telefono NUMERIC)");
+        db.execSQL("CREATE TABLE Clientes (Id INTEGER PRIMARY KEY AUTOINCREMENT, IDCliente NUMERIC, Cliente TEXT, Sucursal TEXT, Direccion TEXT, Ciudad TEXT, Telefono NUMERIC)");
 
         // Base de datos de Pedidos Local - Solo se usara para almacenar la estructura del pedido y cargarla a la base de datos en la nube
         db.execSQL("CREATE TABLE PedidosLocal (CodigoPedido TEXT PRIMARY KEY, IDCliente TEXT, Cliente TEXT, Sucursal TEXT, Direccion TEXT, Ciudad TEXT, Telefono NUMERIC, Items NUMERIC, ValorFinal NUMERIC, IVA NUMERIC, Observaciones TEXT, FechaCreacion TEXT, FechaEntrega TEXT, CodigoVendedor TEXT, Estatus NUMERIC)");
@@ -564,7 +564,7 @@ public class BasesDeDatos extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         // Definir cada columna que se ingresará a la base de datos
-        String NIT;
+        Double NIT;
         String Cliente;
         String Sucursal;
         String Direccion;
@@ -575,7 +575,7 @@ public class BasesDeDatos extends SQLiteOpenHelper {
         for (ArrayList<String> fila : BaseClientes) {
 
             // Obtener cada valor del array y referenciarlo en una de las variables
-            NIT = fila.get(0);
+            NIT = Double.valueOf(fila.get(0));
             Cliente = fila.get(1);
             Sucursal = fila.get(2);
             Direccion = fila.get(3);

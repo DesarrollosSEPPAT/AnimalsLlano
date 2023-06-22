@@ -73,7 +73,6 @@ public class InicioSesion extends AnularBotonRetroceso {
         } else { // Si no hay internet
             Toast.makeText(InicioSesion.this, "No tienes conexión a internet. Ten en cuenta que los productos y cantidades disponibles pueden estar desactualizados hasta que tengas una conexión estable a internet", Toast.LENGTH_LONG).show();
             // No limpiamos la base de datos
-
         }
 
         Acceder.setOnClickListener(new View.OnClickListener() {
@@ -186,6 +185,7 @@ public class InicioSesion extends AnularBotonRetroceso {
                     } else {
                         valorF = "";
                     }
+
                     if (valorF.equals("")){
                         continuar = false;
                     } else {

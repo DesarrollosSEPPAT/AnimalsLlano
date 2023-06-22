@@ -10,46 +10,35 @@
     <!-- Sección 1 con fondo verde y foto -->
 
     <!-- Sección 2 con espacio para botones de inicio de sesión -->
-    <RelativeLayout
-        android:id="@+id/seccion1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp"
-        android:background="#FFFFFF"
-        tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="@dimen/_140sdp"
-            android:layout_height="@dimen/_140sdp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5sp"
-            android:background="@drawable/cancelar"
-            android:src="@drawable/animalslogo" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/cancelar"
+        android:src="@drawable/animalslogo" >
 
-    </RelativeLayout>
+    </ImageView>
 
     <RelativeLayout
         android:id="@+id/seccion2"
         android:layout_width="@dimen/_220sdp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/seccion1">
-
-        <!-- Texto de Login -->
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_below="@id/logo">
 
         <!-- Texto de nombre de usuario -->
         <TextView
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5sp"
-            android:layout_marginTop="5sp"
-            android:layout_marginEnd="5sp"
-            android:layout_marginBottom="5sp"
             android:gravity="center"
             android:text="LOGIN"
             android:textColor="@color/black"
-            android:textSize="@dimen/_20sdp"
+            android:textSize="@dimen/_18sdp"
             android:textStyle="bold" />
 
         <TextView
@@ -57,10 +46,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/login"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:text="NOMBRE DE USUARIO"
             android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp" />
+            android:textSize="@dimen/_11sdp" />
 
         <!-- Capturar usuario -->
         <EditText
@@ -69,12 +58,12 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background"
             android:layout_below="@id/lbusuario"
-            android:padding="16sp"
-            android:layout_marginTop="5sp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
             android:textColorHint="#0C7238"
             android:textColor="#0C7238"
             android:inputType="textEmailAddress"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_14sdp"
             android:layout_gravity="center_horizontal" />
 
         <!-- Texto de nombre de usuario -->
@@ -83,10 +72,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/usuario"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:text="CONTRASEÑA"
             android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp" />
+            android:textSize="@dimen/_11sdp" />
 
         <!-- Capturar usuario -->
         <EditText
@@ -95,12 +84,12 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background"
             android:layout_below="@id/lbcontrasena"
-            android:padding="16sp"
-            android:layout_marginTop="5sp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
             android:textColorHint="#0C7238"
             android:textColor="#0C7238"
             android:inputType="textPassword"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_14sdp"
             android:layout_gravity="center_horizontal" />
 
         <TextView
@@ -108,8 +97,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/contrasena"
-            android:layout_marginTop="10sp"
-            android:text="Olvide Contraseña"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="Olvidé la Contraseña"
             android:textColor="@color/orange"
             android:textStyle="bold"
             android:textAlignment="textEnd"
@@ -121,26 +110,27 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background2"
             android:layout_below="@id/olvidarusuario"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:text="INGRESAR"
+            android:padding="@dimen/_4sdp"
             android:textColor="@color/white"
-            android:textSize="@dimen/_16sdp"
+            android:textSize="@dimen/_14sdp"
+            />
+
+        <TextView
+            android:id="@+id/registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes una cuenta? Registrate"
+            android:gravity="center"
+            android:layout_below="@id/iniciarsesion"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
             />
 
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/registro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="¿No tienes una cuenta? Registrate"
-        android:gravity="center"
-        android:layout_below="@id/seccion2"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textColor="@color/orange"
-        android:textStyle="bold"
-        android:textSize="@dimen/_12sdp"
-        />
 
     <TextView
         android:id="@+id/seppat"
@@ -150,7 +140,7 @@
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/_15sdp"
-        android:textSize="@dimen/_12sdp"
+        android:textSize="@dimen/_10sdp"
         />
 
 </RelativeLayout>

@@ -10,7 +10,7 @@
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="300sp"
+        android:layout_height="@dimen/_200sdp"
         android:layout_centerInParent="true"
         android:src="@drawable/logoanimado">
 
@@ -23,7 +23,8 @@
         android:text="FROM SEPPAT SAS"
         android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15sp"
+        android:textSize="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         />
 
 </RelativeLayout>
